@@ -121,7 +121,12 @@ Calculate the values of beta_D for an image from the depths, illuminations, and 
 def calculate_beta_D(depths, a, b, c, d):
     return (a * np.exp(b * depths)) + (c * np.exp(d * depths))
 
-
+'''
+Filter the data such that only one point is selected per "bin", defined using a radius.
+The median value is selected per bin.
+This prevents the regression from being overwhelmed due to the
+large amount of junk data at certain points in the range.
+'''
 def filter_data(X, Y, radius_fraction=0.01):
     idxs = np.argsort(X)
     X_s = X[idxs]
