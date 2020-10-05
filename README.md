@@ -24,17 +24,17 @@ python3 seathru-mono-e2e.py --monodepth-add-depth 1.0 --monodepth-multiply-depth
 
 Input:
 
-![](input.png?raw=true)
+![](images/input.png?raw=true)
 
 
 Output:
 
-![](output.png?raw=true)
+![](images/output.png?raw=true)
 
 
 Output with estimated depths (ranging from 1.0-4.0 meters):
 
-![](output-monodepth.png?raw=true)
+![](images/output-monodepth.png?raw=true)
 
 
 The monodepth pipeline can also be used with PNG/JPEG images by omitting the `--raw` option. For each image, the `--monodepth-add-depth` parameter controls the minimum depth
