@@ -15,6 +15,11 @@ wget "https://www.dropbox.com/sh/xtimf7qwfak4wwc/AAAGqn2JMe98II9lYeBTVBE2a/D3?dl
 unzip D3.zip
 # generate the image
 python3 seathru.py --image Raw/T_S04858.ARW --depth-map depthMaps/depthT_S04858.tif
+
+## If you want to run the monocular depth estimation pipeline
+# install deps
+git submodule update --init --recursive
+python3 seathru-mono-e2e.py --monodepth-add-depth 1.0 --monodepth-multiply-depth 3.0 --image Raw/T_S04858.ARW --raw --output output-monodepth.png
 ```
 
 Input:
@@ -27,3 +32,15 @@ Output:
 ![](output.png?raw=true)
 
 
+Output with estimated depths (ranging from 1.0-4.0 meters):
+![](output-monodepth.png?raw=true)
+
+
+The monodepth pipeline can also be used with PNG/JPEG images by omitting the `--raw` option. For each image, the `--monodepth-add-depth` parameter controls the minimum depth
+that the estimation will output, and the `--monodepth-multiply-depth` controls the range of depths as follows:
+
+```
+output_depths = monodepth_multiply_depth + (monodepth_multiply_depth * monodepth_depths)
+```
+
+where `monodepth_depths` range from 0 to 1.

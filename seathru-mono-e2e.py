@@ -11,11 +11,11 @@ import numpy as np
 import PIL.Image as pil
 import matplotlib as mpl
 import matplotlib.cm as cm
-import pynng
-from pynng import nng
 
 import torch
 from torchvision import transforms, datasets
+
+sys.path.append("deps/monodepth2")
 
 import deps.monodepth2.networks as networks
 from deps.monodepth2.layers import disp_to_depth
