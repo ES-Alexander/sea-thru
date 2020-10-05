@@ -33,6 +33,7 @@ Output:
 
 
 Output with estimated depths (ranging from 1.0-4.0 meters):
+
 ![](output-monodepth.png?raw=true)
 
 
