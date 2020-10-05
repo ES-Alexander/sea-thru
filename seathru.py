@@ -208,7 +208,7 @@ def recover_image(img, depths, B, beta_D, nmap):
     res = (img - B) * np.exp(beta_D * np.expand_dims(depths, axis=2))
     res = np.maximum(0.0, np.minimum(1.0, res))
     res[nmap == 0] = 0
-    res = scale(wbalance_no_red_10p(res))
+    res = scale(wbalance_gw(res))
     res[nmap == 0] = img[nmap == 0]
     return res
 
@@ -326,9 +326,12 @@ def load_image_and_depth_map(img_fname, depths_fname, size_limit = 1024):
 White balance with 'grey world' hypothesis
 '''
 def wbalance_gw(img):
-    dr = 1.0 / np.mean(img[:, :, 0])
-    dg = 1.0 / np.mean(img[:, :, 1])
-    db = 1.0 / np.mean(img[:, :, 2])
+    r = img[:,:,0]
+    g = img[:,:,1]
+    b = img[:,:,2]
+    dr = 1.0 / np.mean(r[r != 0])
+    dg = 1.0 / np.mean(g[g != 0])
+    db = 1.0 / np.mean(b[b != 0])
     dsum = dr + dg + db
     dr = dr / dsum * 3.
     dg = dg / dsum * 3.
@@ -375,8 +378,12 @@ def wbalance_no_red_10p(img):
 White balance with 'grey world' hypothesis
 '''
 def wbalance_no_red_gw(img):
-    dg = 1.0 / np.mean(img[:, :, 1])
-    db = 1.0 / np.mean(img[:, :, 2])
+    r = img[:,:,0]
+    g = img[:,:,1]
+    b = img[:,:,2]
+    dr = 1.0 / np.mean(r[r != 0])
+    dg = 1.0 / np.mean(g[g != 0])
+    db = 1.0 / np.mean(b[b != 0])
     dsum = dg + db
     dg = dg / dsum * 2.
     db = db / dsum * 2.

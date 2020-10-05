@@ -7,5 +7,4 @@ rawpy
 scikit-image
 torch
 torchvision
-pynng
 pyyaml
