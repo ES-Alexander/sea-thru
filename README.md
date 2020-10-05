@@ -18,10 +18,12 @@ python3 seathru.py --image Raw/T_S04858.ARW --depth-map depthMaps/depthT_S04858.
 ```
 
 Input:
+
 ![](input.png?raw=true)
 
 
 Output:
+
 ![](output.png?raw=true)
 
 
