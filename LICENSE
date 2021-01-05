@@ -22,10 +22,12 @@ SOFTWARE.
 
 
 NOTE:
-This implementation is provided under MIT License, but the Sea-Thru algorithm itself is patented. As specified on [Derya's website](https://www.deryaakkaynak.com/sea-thru):
+This implementation is provided under MIT License, but the Sea-Thru algorithm 
+itself is patented. 
 
-Sea-thru is protected by a registered patent owned by Carmel Ltd the Economic Co. of the Haifa University and its subsidiary SeaErra.
+As specified on [Derya's website](https://www.deryaakkaynak.com/sea-thru):
 
-Any use of this technology or other material presented here is prohibited without a prior written approval by the owners.
-
-For more information, please contact Carmel@univ.haifa.ac.il.
+Sea-thru is protected by a registered patent owned by Carmel Ltd the Economic Co.
+of the Haifa University and its subsidiary SeaErra. Any use of this technology or
+other material presented here is prohibited without a prior written approval by 
+the owners. For more information, please contact Carmel@univ.haifa.ac.il.
