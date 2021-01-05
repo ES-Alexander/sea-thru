@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+NOTE:
+This implementation is provided under MIT License, but the Sea-Thru algorithm itself is patented. As specified on [Derya's website](https://www.deryaakkaynak.com/sea-thru):
+
+Sea-thru is protected by a registered patent owned by Carmel Ltd the Economic Co. of the Haifa University and its subsidiary SeaErra.
+
+Any use of this technology or other material presented here is prohibited without a prior written approval by the owners.
+
+For more information, please contact Carmel@univ.haifa.ac.il.
